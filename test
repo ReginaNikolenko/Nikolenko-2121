@@ -1,0 +1,4 @@
+num1 = 10
+num2 = 0
+assert num2 != 0, "The divisor is zero"
+print("The result is:", num1/num2)
