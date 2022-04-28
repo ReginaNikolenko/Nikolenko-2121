@@ -1,0 +1,23 @@
+a=[[5,2,0],[1,2,0],[1,0,0]]
+
+#1 задача
+f1 = lambda x:sum(0 in i for i in x)
+print(f1(a))
+#2 задача
+def f2(a):
+    n = len(a)
+    m = len(a[0])
+    rmax = 1
+    for j in range(m):
+        tmp = 1
+        for i in range(n-1):
+            if a[i][j] == a[i+1][j]:
+                tmp += 1
+            else:
+                rmax = max(tmp, rmax)
+                tmp = 1
+        rmax = max(tmp, rmax)
+    print(rmax)
+    return
+    
+f2(a)
