@@ -1,0 +1,17 @@
+import numpy as np
+
+x = 0
+nrows = 6
+ncols = 9
+a = np.random.randint(0, 10, size=(nrows, ncols))
+print('Сгенерированная матрица: ')
+print(a)
+print('Результат:')
+for i in range(ncols):
+    x = x+1
+    for j in range(nrows):
+        if (a[j][i] == 0):
+            print('Номер 1-го нулевого элемента',x,'столбца = ', j+1)
+            break
+        else:
+            continue
