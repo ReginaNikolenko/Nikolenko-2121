@@ -1,0 +1,17 @@
+import numpy as np
+
+nrows = 5
+ncols = 8
+a = np.random.randint(-10, 10, size=(nrows, ncols))
+print('Сгенерированная матрица: ')
+print(a)
+min_mx = 100
+for i in range(nrows):
+    for j in range(ncols):
+        if abs(a[i][j]) < abs(min_mx):
+            min_mx = a[i][j]
+print('Минимальное по модулю число: ', abs(min_mx))
+for i in range(nrows):
+    for j in range(ncols):
+        if min_mx == a[i][j]:
+            print('Строка:', i+1, '|', 'Столбец:', j+1)
